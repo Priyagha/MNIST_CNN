@@ -1,3 +1,5 @@
+#Importing required libraries
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -9,3 +11,9 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
+
+# Loading the MNIST dataset
+transform = transforms.ToTensor()
+
+train_data = datasets.MNIST(root='../Data', train=True, download=True, transform=transform)
+test_data = datasets.MNIST(root='../Data', train=False, download=True, transform=transform)
