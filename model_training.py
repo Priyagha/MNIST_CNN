@@ -17,3 +17,7 @@ transform = transforms.ToTensor()
 
 train_data = datasets.MNIST(root='../Data', train=True, download=True, transform=transform)
 test_data = datasets.MNIST(root='../Data', train=False, download=True, transform=transform)
+
+# Creating data loaders 
+train_loader = DataLoader(train_data, batch_size=10, shuffle=True)
+test_loader = DataLoader(test_data, batch_size=10, shuffle=False)
