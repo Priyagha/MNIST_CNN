@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
+from model import ConvolutionalNetwork
 
 # Loading the MNIST dataset
 transform = transforms.ToTensor()
@@ -21,3 +22,4 @@ test_data = datasets.MNIST(root='../Data', train=False, download=True, transform
 # Creating data loaders 
 train_loader = DataLoader(train_data, batch_size=10, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=10, shuffle=False)
+
